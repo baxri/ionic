@@ -1,14 +1,14 @@
+
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    asdfnkfjsdnflkdsnlkfnlkdn
-  </p>
-  <p>
-    <button ion-button>Default</button>
-  </p>
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item.text }}
+    </button>  
+  </ion-list>
+
 </ion-content>
